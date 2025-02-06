@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de San Valentín 💖</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+        body {
+            font-family: 'Sacramento', cursive;
+            text-align: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #d63384;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        .heart {
+            font-size: 6em;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        .message {
+            font-size: 2em;
+            margin: 20px auto;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            background-color: #ff4d79;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background-color: #d63384;
+            transform: scale(1.1);
+        }
+        #proposal {
+            display: none;
+            font-size: 2.5em;
+            margin-top: 30px;
+            color: #ff4d79;
+            animation: fadeIn 1.5s;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .flower {
+            position: absolute;
+            width: 50px;
+            animation: float 5s infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Feliz San Valentín! 💖</h1>
+        <div class="heart">❤️</div>
+        <p class="message">Eres la persona más especial en mi vida, y quiero preguntarte algo importante...</p>
+        <button class="btn" onclick="showProposal()">Haz clic aquí 💌</button>
+        <p id="proposal">¿Quieres ser mi San Valentín? 💕</p>
+    </div>
+    <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/rose-1290483_1280.png" class="flower" style="top: 10%; left: 10%;">
+    <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/rose-1290483_1280.png" class="flower" style="top: 20%; right: 15%;">
+    <script>
+        function showProposal() {
+            document.getElementById("proposal").style.display = "block";
+        }
+    </script>
+</body>
+</html>
